@@ -10,7 +10,7 @@ def main():
     servicesLogs= Logging("C:\\")
 
     
-    processServices = subprocess.Popen([sys.executable, './services/endpointsServices/myServices.py'])
+    processServices = subprocess.Popen([sys.executable, "-m",'services.endpointsServices.APIService'])
     processDB = subprocess.Popen([sys.executable, './database/myDb.py'])
 
     

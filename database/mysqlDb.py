@@ -1,11 +1,15 @@
 import mysql.connector
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 class mysqlDb():
     def __init__(self):
-        self._host:str="localhost"
-        self._DBName=""
-        self._dbUsr=""
-        self._dbPass=""
+        self._host= os.getenv("DBHost") #"localhost"
+        self._DBName=os.getenv("DBName")
+        self._dbUsr=os.getenv("DBUsr")
+        self._dbPass=os.getenv("DBPass")
 
     @property
     def host(self):
