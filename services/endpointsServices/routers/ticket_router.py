@@ -4,8 +4,9 @@ from repositories.ticket_repository import ticketRepo
 ticket_router=APIRouter()
 
 @ticket_router.get("/tickets")
-def getTickets():
-    return {"message": f"The list of all tickets {ticketRepo().getAllTickets()}"}
+async def getTickets():
+    ticketlist = await ticketRepo().getAllTickets()
+    return {"message": f"The list of all tickets {ticketlist}"}
 
 
 

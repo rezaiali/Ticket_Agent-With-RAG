@@ -1,15 +1,15 @@
 import mysql.connector
-import os
-from dotenv import load_dotenv
-
-load_dotenv()
 
 class mysqlDb():
-    def __init__(self):
-        self._host= os.getenv("DBHost") #"localhost"
-        self._DBName=os.getenv("DBName")
-        self._dbUsr=os.getenv("DBUsr")
-        self._dbPass=os.getenv("DBPass")
+    def __init__(self,Host,DBName,DbUser,DbPass):
+        #self._host= os.getenv("DBHost") #"localhost"
+        self._host=Host
+        #self._DBName=os.getenv("DBName")
+        self._DBName=DBName
+        #self._dbUsr=os.getenv("DBUsr")
+        self._dbUsr=DbUser
+        #self._dbPass=os.getenv("DBPass")
+        self._dbPass=DbPass
 
     @property
     def host(self):
@@ -43,7 +43,7 @@ class mysqlDb():
         self._dbPass=value
 
     def get_connection(self):
-        return mysql.connector.connect(
+        return  mysql.connector.connect(
             host=self._host,
             database=self._DBName,
             user=self._dbUsr,
