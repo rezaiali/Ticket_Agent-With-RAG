@@ -6,12 +6,13 @@ from tools.Logging import Logging
 
 
 def main():
-
+    
     servicesLogs= Logging("C:\\")
 
-    
+  
     processServices = subprocess.Popen([sys.executable, "-m",'services.endpointsServices.APIService'])
     processDB = subprocess.Popen([sys.executable, './database/myDb.py'])
+    processAI=subprocess.Popen([sys.executable,"-m",'services.AIServices.AIServiceMain'])
 
     
     now =datetime.now()

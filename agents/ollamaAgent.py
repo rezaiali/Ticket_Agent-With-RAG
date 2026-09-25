@@ -6,7 +6,7 @@ from ollama import chat
 
 
 class OllamaAgent:
-    """An Ollama chat agent configured with a system prompt and tools."""
+    #"""An Ollama chat agent configured with a system prompt and tools."""
 
     def __init__(self, model: str) -> None:
         self.model = model
