@@ -1,0 +1,245 @@
+AI SUPPORT TICKET ASSISTANT
+System Knowledge Base
+Version: 1.0
+
+==================================================
+1. SYSTEM OVERVIEW
+==================================================
+
+The AI Support Ticket Assistant is a support management system that helps users create, view, update, and track technical support tickets. It also helps support agents understand issues and prepare useful responses.
+
+The system combines a standard ticket-management application with artificial intelligence. The ticket application stores and manages ticket data. The AI assistant uses ticket information and approved support documents to answer questions, summarize problems, suggest troubleshooting steps, and draft responses.
+
+The purpose of the system is to reduce repetitive work, improve response quality, and help support teams resolve common issues faster. The AI assistant supports human agents; it does not replace their judgment.
+
+==================================================
+2. WHO CAN USE THE SYSTEM
+==================================================
+
+Customers or employees can use the system to:
+
+- Create a support ticket.
+- Describe a technical problem.
+- View the status of their tickets.
+- Add more information to an existing ticket.
+- Read approved troubleshooting guidance.
+
+Support agents can use the system to:
+
+- Review incoming tickets.
+- Search and filter tickets.
+- Update a ticket's category, priority, status, or assignment.
+- Ask the AI assistant to summarize a ticket.
+- Receive suggested troubleshooting steps.
+- Generate a draft response for review.
+- Search the support knowledge base.
+
+Administrators can use the system to:
+
+- Manage users and permissions.
+- Maintain ticket categories and workflow settings.
+- Add, update, or remove approved knowledge-base documents.
+- Review system activity, errors, and AI usage.
+
+==================================================
+3. MAIN TICKET INFORMATION
+==================================================
+
+Each support ticket can contain the following information:
+
+- Ticket ID: A unique number used to identify the ticket.
+- Title: A short description of the issue.
+- Description: Detailed information about the problem.
+- Category: The general type of issue.
+- Priority: The urgency and business impact of the issue.
+- Status: The current stage of the ticket.
+- Created by: The person who reported the issue.
+- Assigned to: The support agent or team responsible for it.
+- Created date: The date and time the ticket was submitted.
+- Updated date: The most recent date and time the ticket changed.
+- Comments: Updates or questions added by users and support agents.
+- Resolution: The final explanation of how the issue was resolved.
+
+Common ticket categories include authentication, account management, application error, billing, hardware, network, security, and service request.
+
+Common priorities include low, medium, high, and critical. Priority should be based on urgency and impact, not only on the words used by the requester.
+
+Common statuses include new, open, in progress, waiting for user, resolved, and closed.
+
+==================================================
+4. TICKET WORKFLOW
+==================================================
+
+Step 1: A user creates a ticket by entering a title and description. The user should include the error message, affected service, time of the problem, and troubleshooting already attempted when available.
+
+Step 2: The system saves the ticket and assigns it a unique ticket ID.
+
+Step 3: The AI assistant can analyze the ticket and suggest a category, priority, short summary, possible cause, and recommended next steps.
+
+Step 4: A support agent reviews the ticket and the AI suggestions. The agent may accept, change, or reject any suggestion.
+
+Step 5: The support agent investigates the issue, communicates with the user, and updates the ticket status.
+
+Step 6: When a solution is confirmed, the support agent records the resolution and marks the ticket as resolved.
+
+Step 7: The ticket may be closed after the requester confirms the solution or after the organization's closure policy is satisfied.
+
+==================================================
+5. HOW THE AI ASSISTANT WORKS
+==================================================
+
+The AI assistant can analyze ticket text and return structured information such as:
+
+- A short problem summary.
+- A suggested category.
+- A suggested priority.
+- Possible causes.
+- Recommended troubleshooting actions.
+- A draft response to the requester.
+- Relevant information found in approved support documents.
+
+The AI assistant uses retrieval-augmented generation, also called RAG. RAG allows the system to search the support knowledge base for relevant passages before generating an answer.
+
+When a user asks a question, the system converts the question into a search representation and searches the knowledge base for related content. It then sends the user's question, the retrieved passages, and instructions to the language model. The model uses that information to prepare an answer.
+
+The AI assistant should answer from the retrieved knowledge-base content whenever possible. If the documents do not contain enough information, it should clearly say that it does not have enough information and recommend contacting a support agent. It should not invent system policies, ticket details, or technical instructions.
+
+==================================================
+6. KNOWLEDGE BASE
+==================================================
+
+The knowledge base contains approved information used by the AI assistant. It may include:
+
+- System introductions and user guides.
+- Frequently asked questions.
+- Password-reset instructions.
+- Login and authentication troubleshooting.
+- Network and VPN troubleshooting.
+- Application error guides.
+- Billing and account procedures.
+- Support policies and escalation rules.
+- Known issues and confirmed workarounds.
+
+Knowledge-base documents should be accurate, current, clearly written, and approved by the responsible team. Documents should not contain passwords, private keys, access tokens, or unnecessary personal information.
+
+When documents are added or changed, they must be processed again so the retrieval index contains the latest approved content.
+
+==================================================
+7. EXAMPLE OF AI-ASSISTED TICKET ANALYSIS
+==================================================
+
+Example ticket:
+
+Title: Portal login failure
+Description: I changed my password and now receive an HTTP 403 error when I try to sign in.
+
+Possible AI response:
+
+Summary: The user cannot access the portal after changing the account password.
+Suggested category: Authentication
+Suggested priority: Medium, unless the issue affects many users or a critical business process.
+Possible cause: The browser or application may still be using an expired session or authentication token.
+Recommended actions: Sign out completely, clear the existing browser session, reopen the browser, and sign in again. If the problem continues, verify the user's account status and permissions.
+
+This response is a recommendation based on available information. A support agent must verify the cause and confirm the correct resolution.
+
+==================================================
+8. AI LIMITATIONS AND HUMAN REVIEW
+==================================================
+
+The AI assistant can make mistakes or produce incomplete suggestions. Its responses should be treated as recommendations, not guaranteed solutions.
+
+The AI assistant must not:
+
+- Change or close a ticket without authorization.
+- Claim that an action was completed if no system tool confirmed it.
+- Reveal one user's private information to another user.
+- Request or expose passwords, access tokens, or private keys.
+- Invent ticket records, company policies, or troubleshooting steps.
+- Make final decisions about security incidents or major outages.
+
+Support agents should review AI-generated responses before sending them to users, especially for security, privacy, billing, legal, or high-impact issues.
+
+Critical incidents, suspected security breaches, widespread outages, and issues involving sensitive data must be escalated to the appropriate human support or security team.
+
+==================================================
+9. DATA PRIVACY AND SECURITY
+==================================================
+
+Users should include only the information required to investigate their issue. They should never place passwords, verification codes, access tokens, private keys, banking information, or other highly sensitive data in a ticket.
+
+Access to ticket information should be controlled by user roles and permissions. Users should see only the tickets they are authorized to access.
+
+The system should record important activity such as ticket creation, ticket updates, status changes, assignments, and AI-assisted actions. These records help with troubleshooting, security reviews, and accountability.
+
+==================================================
+10. FREQUENTLY ASKED QUESTIONS
+==================================================
+
+Question: What is the AI Support Ticket Assistant?
+Answer: It is a ticket-management system with an AI assistant that helps users and support agents create, understand, search, and resolve support tickets.
+
+Question: What can the AI assistant do?
+Answer: It can summarize a ticket, suggest a category and priority, retrieve relevant support documentation, recommend troubleshooting steps, and draft a response for a support agent to review.
+
+Question: Does the AI assistant resolve tickets automatically?
+Answer: No. It provides recommendations. A support agent should verify the solution and control important ticket changes unless an approved automated workflow explicitly permits them.
+
+Question: How does the AI answer questions about the system?
+Answer: It searches approved knowledge-base documents for relevant information and uses the retrieved content to prepare an answer.
+
+Question: What happens if the AI cannot find an answer?
+Answer: It should say that the available knowledge base does not contain enough information and recommend contacting or escalating to a support agent.
+
+Question: Can users ask about a specific ticket?
+Answer: Yes, if they are authorized to access that ticket. The system may use the ticket ID to retrieve current ticket details.
+
+Question: What information should a user provide when creating a ticket?
+Answer: The user should provide a clear title, a detailed description, the affected system or service, any error message, when the issue started, its business impact, and troubleshooting already attempted.
+
+Question: How is ticket priority decided?
+Answer: Priority is based on urgency and impact. A critical priority is normally reserved for major outages, severe security events, or failures that stop essential business operations.
+
+Question: Can the AI access every ticket?
+Answer: No. Access should follow the same permissions used by the ticket system. The AI should receive only information the current user is authorized to access.
+
+Question: Is the AI response always correct?
+Answer: No. AI-generated content can be incomplete or incorrect, so important recommendations and user-facing responses should be reviewed by a support agent.
+
+Question: Can sensitive information be entered in a ticket?
+Answer: Users should not enter passwords, verification codes, private keys, access tokens, or unnecessary personal or financial information.
+
+Question: Who maintains the knowledge base?
+Answer: Authorized support staff or administrators maintain and approve the documents used by the AI assistant.
+
+Question: Why might the AI give an outdated answer?
+Answer: The source document may be outdated, or a revised document may not yet have been processed and added to the retrieval index.
+
+Question: What should a user do during a major outage or security incident?
+Answer: The issue should be escalated immediately through the organization's approved emergency or security process. The AI assistant should not be the only response channel for a critical incident.
+
+==================================================
+11. SAMPLE QUESTIONS USERS CAN ASK
+==================================================
+
+- What is this system used for?
+- How do I create a support ticket?
+- What information should I include in my ticket?
+- What do the ticket statuses mean?
+- How is ticket priority determined?
+- Can the AI summarize my issue?
+- Can the AI suggest troubleshooting steps?
+- How does the AI search the knowledge base?
+- Can the AI update or close my ticket?
+- What should I do if the AI cannot answer my question?
+- Who can see my ticket?
+- What information should I avoid putting in a ticket?
+
+==================================================
+12. SUPPORT GUIDANCE
+==================================================
+
+For routine questions, users can consult the AI assistant and the approved knowledge base. If the answer is unclear, the suggested steps do not work, or the issue requires access that the user does not have, the ticket should be assigned or escalated to a support agent.
+
+For critical outages, security incidents, suspected data exposure, or urgent business-impacting problems, users should follow the organization's official escalation procedure immediately.
+
